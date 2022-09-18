@@ -3,20 +3,20 @@
 50 python security traps for GuardDuty threat message types. Traps for:
 
 
-DefenseEvasion
+DefenseEvasion (2)
 
-Persistence:Kubernetes
+Persistence:Kubernetes (5)
 
-Policy:IAMUser
+Policy:IAMUser (1)
 
-Policy:Kubernetes
+Policy:Kubernetes (4)
 
-Policy:S3
+Policy:S3 (3)
 
-Trojan
+Trojan:EC2 (4)
 
-UnauthorizedAccess EC2
+UnauthorizedAccess:EC2 (6)
 
-UnauthorizedAccess IAM
+UnauthorizedAccess:IAM (6)
 
-UnauthorizedAccess S3
+UnauthorizedAccess:S3 (2)
