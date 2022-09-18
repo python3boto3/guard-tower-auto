@@ -5,14 +5,14 @@
 
 DefenseEvasion
 
-K8sPersistence
+Persistence:Kubernetes
 
-Policies
+Policy
 
-Trojans
+Trojan
 
-Unauthorized Access EC2
+UnauthorizedAccess EC2
 
-Unauthorized Access IAM
+UnauthorizedAccess IAM
 
-Unauthorized Access S3
+UnauthorizedAccess S3
