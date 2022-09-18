@@ -1,8 +1,7 @@
 # guard-tower-auto
 
-50 python security traps for GuardDuty threat message types
+50 python security traps for GuardDuty threat message types. Traps for:
 
-Traps for:
 
 DefenseEvasion
 
