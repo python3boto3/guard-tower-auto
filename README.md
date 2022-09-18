@@ -4,15 +4,44 @@
 
 Traps for:
 
-DefenseEvasion:IAMUser/AnomalousBehavior, DefenseEvasion:Kubernetes/MaliciousIPCaller, Persistence:Kubernetes/ContainerWithSensitiveMount, 
-Persistence:Kubernetes/MaliciousIPCaller, Persistence:Kubernetes/MaliciousIPCaller.Custom, Persistence:Kubernetes/SuccessfulAnonymousAccess, 
-Persistence:Kubernetes/TorIPCaller, Policy:IAMUser/RootCredentialUsage, Policy:Kubernetes/AdminAccessToDefaultServiceAccount, 
-Policy:Kubernetes/AnonymousAccessGranted, Policy:Kubernetes/ExposedDashboard, Policy:Kubernetes/KubeflowDashboardExposed, 
-Policy:S3/AccountBlockPublicAccessDisabled, Policy:S3/BucketAnonymousAccessGranted, Policy:S3/BucketBlockPublicAccessDisabled, 
-Trojan:EC2/DriveBySourceTraffic!DNS, Trojan:EC2/DropPoint, Trojan:EC2/DropPoint!DNS, Trojan:EC2/PhishingDomainRequest!DNS, 
-UnauthorizedAccess:EC2/MaliciousIPCaller.Custom, UnauthorizedAccess:EC2/MetadataDNSRebind, UnauthorizedAccess:EC2/RDPBruteForce, 
-UnauthorizedAccess:EC2/SSHBruteForce, UnauthorizedAccess:EC2/TorClient, UnauthorizedAccess:EC2/TorRelay, 
-UnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B, UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.InsideAWS, 
-UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.OutsideAWS, UnauthorizedAccess:IAMUser/MaliciousIPCaller, 
-UnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom, UnauthorizedAccess:IAMUser/TorIPCaller, UnauthorizedAccess:S3/MaliciousIPCaller.Custom, 
+DefenseEvasion:IAMUser/AnomalousBehavior
+DefenseEvasion:Kubernetes/MaliciousIPCaller
+
+Persistence:Kubernetes/ContainerWithSensitiveMount
+Persistence:Kubernetes/MaliciousIPCaller
+Persistence:Kubernetes/MaliciousIPCaller.Custom
+Persistence:Kubernetes/SuccessfulAnonymousAccess
+Persistence:Kubernetes/TorIPCaller
+
+Policy:IAMUser/RootCredentialUsage
+Policy:Kubernetes/AdminAccessToDefaultServiceAccount
+Policy:Kubernetes/AnonymousAccessGranted
+Policy:Kubernetes/ExposedDashboard
+Policy:Kubernetes/KubeflowDashboardExposed
+Policy:S3/AccountBlockPublicAccessDisabled
+Policy:S3/BucketAnonymousAccessGranted
+Policy:S3/BucketBlockPublicAccessDisabled
+
+Trojan:EC2/DriveBySourceTraffic!DNS
+Trojan:EC2/DropPoint
+Trojan:EC2/DropPoint!DNS
+Trojan:EC2/PhishingDomainRequest!DNS
+
+UnauthorizedAccess:EC2/MaliciousIPCaller.Custom
+UnauthorizedAccess:EC2/MetadataDNSRebind
+UnauthorizedAccess:EC2/RDPBruteForce
+UnauthorizedAccess:EC2/SSHBruteForce
+UnauthorizedAccess:EC2/TorClient
+UnauthorizedAccess:EC2/TorRelay
+
+UnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B
+UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.InsideAWS
+UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.OutsideAWS
+UnauthorizedAccess:IAMUser/MaliciousIPCaller
+UnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom
+UnauthorizedAccess:IAMUser/TorIPCaller
+
+UnauthorizedAccess:S3/MaliciousIPCaller.Custom
 UnauthorizedAccess:S3/TorIPCaller
+![image](https://user-images.githubusercontent.com/111497266/190921244-a739a602-41a4-4182-8c7d-e1b6ae7f1d70.png)
+
