@@ -2,6 +2,15 @@
 
 50 python security traps for GuardDuty threat message types. Traps for:
 
+Backdoor:EC2 (8)
+
+Behaviour (2)
+
+CredentialAccess:IAM(1)
+
+CredentialAccess:Kubernetes(4)
+
+CryptoCurrency (2)
 
 DefenseEvasion (2)
 
