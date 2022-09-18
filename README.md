@@ -4,6 +4,30 @@
 
 Traps for:
 
+DefenseEvasion
+
+K8sPersistence
+
+Policies
+
+Trojans
+
+Unauthorized Access EC2
+
+Unauthorized Access IAM
+
+Unauthorized Access S3
+
+
+
+
+
+
+
+
+
+
+
 DefenseEvasion:IAMUser/AnomalousBehavior
 DefenseEvasion:Kubernetes/MaliciousIPCaller
 
