@@ -7,7 +7,11 @@ DefenseEvasion
 
 Persistence:Kubernetes
 
-Policy
+Policy:IAMUser
+
+Policy:Kubernetes
+
+Policy:S3
 
 Trojan
 
