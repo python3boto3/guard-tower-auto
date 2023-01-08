@@ -1,13 +1,12 @@
-
-
 '''
 Data Cleansing and validation exercise.
 --------------------------------------------------------
 A general approach using pandas and python, for spark, or using parallel lambda functions.
 '''
 
+'''
 #1. Re-shape the initial dataset - sort, drop columns, rename column headers
-
+'''
 # GroupBy column A, descending values
 df=df.groupby('A')['B'].sum().sort_values(ascending=False)
 
@@ -22,8 +21,11 @@ df.columns = df.columns.str.lower()
 
 # replace all spaces for underscore
 df.columns = df.columns.str.replace(' ', '_')
-#2. Remove duplicates
 
+
+'''
+#2. Remove duplicates
+'''
 import pandas as pd
 from pandas_dedupe import dedupe_dataframe
 
@@ -32,8 +34,11 @@ dd = dedupe_dataframe(df, ['name', 'zip'], canonicalize=True, sample_size=1)
 
 # count duplicate records
 print(df.duplicated().sum())
-#3. Fix structural errors Structural errors - naming conventions, typos, incorrect capitalization. Inconsistencies can cause mislabeled categories. For example, you find “N/A” & “Not App”, but they should be analyzed as the same category.
 
+
+'''
+#3. Fix structural errors Structural errors - naming conventions, typos, incorrect capitalization. Inconsistencies can cause mislabeled categories. For example, you find “N/A” & “Not App”, but they should be analyzed as the same category.
+'''
 # capitalize all words
 df.columns = df.columns.str.title()
 df.rename(columns=str.title, inplace=True)  
@@ -45,8 +50,11 @@ df.columns = df.columns.str.replace(r'(\w+)', lambda x: x.group().capitalize(), 
 
 # replacing several items for one preferred version
 df['RoleName'].replace(['N/A.', 'NA', 'Not applicable', 'not aplicable', 'Not Applicable'], 'not applicable')
-#4. Maintain consistency
 
+
+'''
+#4. Maintain consistency
+'''
 # make data consistent first …
 Series.str.isnumeric()
 # Check whether all characters in each string are numeric.
@@ -77,8 +85,11 @@ Series.str.isupper
 
 Series.str.istitle
 # Check whether all characters are titlecase.
-#5. Handle missing data As a first option, you can drop observations that have missing values, doing this will drop/lose information. As a second option, you can input missing values based on other observations; there is an opportunity to lose data integrity because you may be using assumptions, not actual observations. As a third option, you might alter the way the data is used to effectively navigate null values.
 
+
+'''
+#5. Handle missing data As a first option, you can drop observations that have missing values, doing this will drop/lose information. As a second option, you can input missing values based on other observations; there is an opportunity to lose data integrity because you may be using assumptions, not actual observations. As a third option, you might alter the way the data is used to effectively navigate null values.
+'''
 # determine if any value is missing (true/false)			
 df.isnull().values.any()
 
@@ -93,8 +104,11 @@ df.isnull().sum()
 
 # count total of all missing values in the entire dataframe 		
 df.isnull().sum().sum()
-#6. Validate and QA At the end of the data cleaning process, Does the data make sense?
 
+
+'''
+#6. Validate and QA At the end of the data cleaning process, Does the data make sense?
+'''
 # find the max value in a column
 maxClm = df['x'].max()
 
@@ -106,8 +120,11 @@ maxValues = df[['x', 'z']].max()
 maxValueIndex = df.idxmax()
 print("Maximum values of columns are at row index position :")
 print(maxValueIndex)
-#7. Does the data follow the appropriate rules for its field?
 
+
+'''
+#7. Does the data follow the appropriate rules for its field?
+'''
 Does it prove or disprove your working theory, or bring any insight to light?
 
 # Filter Rows Based on String Length greater than a parameter greater than 50
@@ -115,7 +132,10 @@ df.loc[df['col1'].str.len() > 50]
 
 # filter rows where col1 has string length of 5 and col3 has string length > 7
 df.loc[(df['col1'].str.len() == 5) & (df['col3'].str.len() > 7)]
-#8. Find trends in the data to help you form your next theory.
 
+
+'''
+#8. Find trends in the data to help you form your next theory.
+'''
 # Rule to assess two criteria on different columns
 df.loc[(df['col1'].str.len() >9) & (df['col71'].str.len() < 12)]
