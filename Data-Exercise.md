@@ -1,4 +1,4 @@
-# BlastPoint: Data Cleansing and validation exercise.
+# Data Cleansing and validation exercise.
 A general approach using pandas and python, for spark, 
 or using parallel lambda functions.
 ___
